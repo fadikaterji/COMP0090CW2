@@ -4,6 +4,14 @@ This is the code for CW2 group work for Deep Learning
 This code will require data to be downloaded from: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/datasets/-/tree/oxpet/data_new
 You will also have to change the path in the code
 
+pip libraries that need to be installed:
+  - h5py
+  - IPython
+  - cv2
+  - torchviz
+
+
+
 Code should be run in order of:
 
   - For original MTL Model:
