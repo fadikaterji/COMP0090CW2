@@ -20,7 +20,7 @@ import h5py
 import math
 from torchviz import make_dot
 import pickle
-from networktarg import Encoder
+from networktarg import encoder_cnn
 from networktarg import Decoder
 from data import PetDataSet
 
@@ -41,10 +41,10 @@ DATALOADER_train = torch.utils.data.DataLoader(train_dataset, shuffle=True,batch
 DATALOADER_test = torch.utils.data.DataLoader(test_dataset, shuffle=True,batch_size=32)
 
 loss_fn = torch.nn.MSELoss()
-encoder_mtl= Encoder.to(device)
+encoder_mtl= encoder_cnn.to(device)
 decoder_mtl= Decoder().to(device)
 
-num_epochs = 5
+num_epochs = 150
 
 lr= 0.0005# Learning rate
 params_to_optimize = [
